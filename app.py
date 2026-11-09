@@ -9,10 +9,13 @@ st.markdown("### CBTIS 303 | Ciencias Naturales, Experimentales y Tecnología II
 st.write("Explora los conceptos fisicoquímicos que explican la dinámica de la hidrósfera y la atmósfera, y los flujos de materia y energía en los ecosistemas.")
 
 # --- RUTAS DE IMÁGENES ---
+# NOTA: Agregué los sufijos _1 y _2 donde se necesitan dos imágenes.
 IMAGENES = {
-    "Estados_Agua": "estados_agua.png",
-    "Densidad_Presion": "densidad_presion.png",
-    "Temperatura_Calor": "temperatura_calor.png",
+    "Estados_Agua_1": "estados_agua_1.png",
+    "Estados_Agua_2": "estados_agua_2.png", # NUEVA: Para aplicación en la Tierra (nubes, evaporación)
+    "Densidad_Presion": "densidad_presion.jpg", # Mantengo tu .jpg
+    "Temperatura_Calor_1": "temperatura_vs_calor.png", # NUEVA: Definición
+    "Temperatura_Calor_2": "gradientes_termicos.png", # NUEVA: Gradientes
     "Tiempo_Clima": "tiempo_vs_clima.png",
     "Factores_Clima": "factores_clima.png",
     "Ecosistema": "ecosistema.png",
@@ -204,7 +207,10 @@ with tab_fisico:
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Estados_Agua"], "Estados de agregación del agua y sus cambios de estado.")
+            # Apilamos dos imágenes aquí
+            mostrar_imagen(IMAGENES["Estados_Agua_1"], "Estados de agregación y cambios de estado del agua.")
+            st.write("") # Espacio de separación
+            mostrar_imagen(IMAGENES["Estados_Agua_2"], "Ejemplos de estos estados en la Tierra (nubes, hielo, vapor).")
         with col2:
             st.success("### 💧 Estados de Agregación del Agua")
             st.markdown("""
@@ -232,6 +238,7 @@ with tab_fisico:
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
+            # Esta imagen que elegiste es muy completa, la dejamos sola
             mostrar_imagen(IMAGENES["Densidad_Presion"], "Comparación de densidad y variación de la presión atmosférica con la altura.")
         with col2:
             st.success("### ⚖️ Densidad")
@@ -244,6 +251,9 @@ with tab_fisico:
             st.info("### 🌬️ Presión Atmosférica")
             st.markdown("""
             Es la fuerza que ejerce el peso del aire sobre la superficie.
+            
+            *Observa la imagen: los puntos azules representan las moléculas de aire. A mayor altura, están más separadas, lo que significa menor densidad y menor presión.*
+              
             - **A nivel del mar:** ~1013 hPa.
             - **Disminuye con la altura:** a mayor altitud, menos aire encima.
             - **A 5,500 m:** ~500 hPa (la mitad).
@@ -259,7 +269,10 @@ with tab_fisico:
     with sub3:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Temperatura_Calor"], "Diferencia entre temperatura y calor, y gradientes térmicos.")
+            # Apilamos las dos imágenes aquí
+            mostrar_imagen(IMAGENES["Temperatura_Calor_1"], "Diferencia conceptual entre temperatura y calor.")
+            st.write("") # Espacio de separación
+            mostrar_imagen(IMAGENES["Temperatura_Calor_2"], "Gradientes térmicos en la Tierra (Atmósfera, océano, suelo).")
         with col2:
             st.success("### 🌡️ Temperatura vs Calor")
             st.markdown("""
