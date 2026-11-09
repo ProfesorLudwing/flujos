@@ -2,9 +2,9 @@ import streamlit as st
 import os
 
 # Configuración del Pizarrón Escolar
-st.set_page_config(page_title="El Motor del Planeta", page_icon="🌊", layout="wide")
+st.set_page_config(page_title="Flujos de vida", page_icon="🌊", layout="wide")
 
-st.title("🌊 El Motor del Planeta: Agua, Aire y Flujos de Vida")
+st.title("🌊 Flujos de Vida")
 st.markdown("### CBTIS 303 | Ciencias Naturales, Experimentales y Tecnología III")
 st.write("Explora los conceptos fisicoquímicos que explican la dinámica de la hidrósfera y la atmósfera, y los flujos de materia y energía en los ecosistemas.")
 
