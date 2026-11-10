@@ -9,19 +9,26 @@ st.markdown("### CBTIS 303 | Ciencias Naturales, Experimentales y Tecnología II
 st.write("Explora los conceptos fisicoquímicos que explican la dinámica de la hidrósfera y la atmósfera, y los flujos de materia y energía en los ecosistemas.")
 
 # --- RUTAS DE IMÁGENES ---
-# NOTA: Agregué los sufijos _1 y _2 donde se necesitan dos imágenes.
+# Regla aplicada: Palabra_Palabra y Palabra_Palabra2
 IMAGENES = {
-    "Estados_Agua_1": "estados_agua_1.png",
-    "Estados_Agua_2": "estados_agua_2.png", # NUEVA: Para aplicación en la Tierra (nubes, evaporación)
-    "Densidad_Presion": "densidad_presion.jpg", # Mantengo tu .jpg
-    "Temperatura_Calor_1": "temperatura_vs_calor.png", # NUEVA: Definición
-    "Temperatura_Calor_2": "gradientes_termicos.png", # NUEVA: Gradientes
-    "Tiempo_Clima": "tiempo_vs_clima.png",
-    "Factores_Clima": "factores_clima.png",
-    "Ecosistema": "ecosistema.png",
-    "Cadena_Trofica": "cadena_trofica.png",
-    "Biomasa_Productividad": "biomasa_productividad.png",
-    "Ciclos_Biogeoquimicos": "ciclos_biogeoquimicos.png"
+    # Pestaña 1: Fisicoquímica
+    "estados_agua": "estados_agua.jpg",
+    "estados_agua2": "estados_agua2.png",
+    "densidad_presion": "densidad_presion.jpg",
+    "temperatura_calor": "temperatura_calor.jpg",
+    "gradiente_atmosfera": "gradiente_atmosfera.png",
+    "gradiente_hidrosfera": "gradiente_hidrosfera.jpg",
+    "gradiente_litosfera": "gradiente_litosfera.jpg",
+    
+    # Pestaña 2: Clima (Pendientes)
+    "tiempo_clima": "tiempo_clima.png",
+    "factores_clima": "factores_clima.png",
+    
+    # Pestaña 3: Flujos (Pendientes)
+    "ecosistema": "ecosistema.png",
+    "cadena_trofica": "cadena_trofica.png",
+    "biomasa_productividad": "biomasa_productividad.png",
+    "ciclos_biogeoquimicos": "ciclos_biogeoquimicos.png"
 }
 
 # --- BANCO DE PREGUNTAS ---
@@ -207,10 +214,9 @@ with tab_fisico:
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            # Apilamos dos imágenes aquí
-            mostrar_imagen(IMAGENES["Estados_Agua_1"], "Estados de agregación y cambios de estado del agua.")
-            st.write("") # Espacio de separación
-            mostrar_imagen(IMAGENES["Estados_Agua_2"], "Ejemplos de estos estados en la Tierra (nubes, hielo, vapor).")
+            mostrar_imagen(IMAGENES["estados_agua"], "Estados de agregación y cambios de estado del agua.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["estados_agua2"], "Ejemplos de estos estados en la Tierra (nubes, hielo, vapor).")
         with col2:
             st.success("### 💧 Estados de Agregación del Agua")
             st.markdown("""
@@ -238,8 +244,7 @@ with tab_fisico:
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            # Esta imagen que elegiste es muy completa, la dejamos sola
-            mostrar_imagen(IMAGENES["Densidad_Presion"], "Comparación de densidad y variación de la presión atmosférica con la altura.")
+            mostrar_imagen(IMAGENES["densidad_presion"], "Comparación de densidad y variación de la presión atmosférica con la altura.")
         with col2:
             st.success("### ⚖️ Densidad")
             st.markdown("""
@@ -269,10 +274,13 @@ with tab_fisico:
     with sub3:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            # Apilamos las dos imágenes aquí
-            mostrar_imagen(IMAGENES["Temperatura_Calor_1"], "Diferencia conceptual entre temperatura y calor.")
-            st.write("") # Espacio de separación
-            mostrar_imagen(IMAGENES["Temperatura_Calor_2"], "Gradientes térmicos en la Tierra (Atmósfera, océano, suelo).")
+            mostrar_imagen(IMAGENES["temperatura_calor"], "Diferencia conceptual entre temperatura y calor.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["gradiente_atmosfera"], "Gradiente térmico en la Atmósfera.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["gradiente_hidrosfera"], "Gradiente térmico en el Océano (Termoclina).")
+            st.write("") 
+            mostrar_imagen(IMAGENES["gradiente_litosfera"], "Gradiente geotérmico en el Suelo.")
         with col2:
             st.success("### 🌡️ Temperatura vs Calor")
             st.markdown("""
@@ -302,7 +310,7 @@ with tab_fisico:
                     st.error(f"❌ Incorrecto. Pista: {q['pista']}")
 
 # ============================================================
-# PESTAÑA 2: CLIMA Y TIEMPO ATMOSFÉRICO
+# PESTAÑA 2: CLIMA Y TIEMPO ATMOSFÉRICO (Texto listo, imágenes pendientes)
 # ============================================================
 with tab_clima:
     st.header("☀️ Clima y Tiempo Atmosférico")
@@ -312,11 +320,10 @@ with tab_clima:
         "🌍 Factores que Modifican el Clima"
     ])
 
-    # --- Subpestaña 1: Tiempo vs Clima ---
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Tiempo_Clima"], "Comparación entre tiempo atmosférico y clima.")
+            mostrar_imagen(IMAGENES["tiempo_clima"], "Comparación entre tiempo atmosférico y clima.")
         with col2:
             st.success("### ⏱️ Tiempo Atmosférico")
             st.markdown("""
@@ -336,11 +343,10 @@ with tab_clima:
             Se debe al aumento de gases de efecto invernadero.
             """)
 
-    # --- Subpestaña 2: Factores que Modifican el Clima ---
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Factores_Clima"], "Factores que modifican el clima: latitud, altitud, corrientes marinas y relieve.")
+            mostrar_imagen(IMAGENES["factores_clima"], "Factores que modifican el clima: latitud, altitud, corrientes marinas y relieve.")
         with col2:
             st.success("### 🌍 Factores del Clima")
             st.markdown("""
@@ -367,7 +373,7 @@ with tab_clima:
                     st.error(f"❌ Incorrecto. Pista: {q['pista']}")
 
 # ============================================================
-# PESTAÑA 3: FLUJOS DE MATERIA Y ENERGÍA
+# PESTAÑA 3: FLUJOS DE MATERIA Y ENERGÍA (Texto listo, imágenes pendientes)
 # ============================================================
 with tab_flujos:
     st.header("🔄 Flujos de Materia y Energía en los Ecosistemas")
@@ -379,11 +385,10 @@ with tab_flujos:
         "♻️ Ciclos Biogeoquímicos"
     ])
 
-    # --- Subpestaña 1: Ecosistema y Biodiversidad ---
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Ecosistema"], "Componentes bióticos y abióticos de un ecosistema.")
+            mostrar_imagen(IMAGENES["ecosistema"], "Componentes bióticos y abióticos de un ecosistema.")
         with col2:
             st.success("### 🌿 Ecosistema")
             st.markdown("""
@@ -403,11 +408,10 @@ with tab_flujos:
             Ejemplo: las raíces rompen rocas (biodeterioro) y crean suelo.
             """)
 
-    # --- Subpestaña 2: Cadena Trófica y Eficiencia ---
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Cadena_Trofica"], "Pirámide trófica y flujo de energía entre niveles.")
+            mostrar_imagen(IMAGENES["cadena_trofica"], "Pirámide trófica y flujo de energía entre niveles.")
         with col2:
             st.success("### 🔗 Cadena Trófica")
             st.markdown("""
@@ -429,11 +433,10 @@ with tab_flujos:
             Por eso las dietas basadas en vegetales son más eficientes.
             """)
 
-    # --- Subpestaña 3: Biomasa y Equilibrio ---
     with sub3:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Biomasa_Productividad"], "Biomasa, productividad primaria y equilibrio ecológico.")
+            mostrar_imagen(IMAGENES["biomasa_productividad"], "Biomasa, productividad primaria y equilibrio ecológico.")
         with col2:
             st.success("### 📊 Biomasa")
             st.markdown("""
@@ -454,11 +457,10 @@ with tab_flujos:
             - Sin equilibrio, el ecosistema colapsa.
             """)
 
-    # --- Subpestaña 4: Ciclos Biogeoquímicos ---
     with sub4:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["Ciclos_Biogeoquimicos"], "Ciclos biogeoquímicos del carbono, nitrógeno y fósforo.")
+            mostrar_imagen(IMAGENES["ciclos_biogeoquimicos"], "Ciclos biogeoquímicos del carbono, nitrógeno y fósforo.")
         with col2:
             st.success("### ♻️ Ciclos Biogeoquímicos")
             st.markdown("""
