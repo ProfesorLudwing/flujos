@@ -12,24 +12,24 @@ st.write("Explora los conceptos fisicoquímicos que explican la dinámica de la 
 # Regla aplicada: Palabra_Palabra, Palabra_Palabra2, Palabra_Palabra3
 IMAGENES = {
     # Pestaña 1: Fisicoquímica
-    "estados_agua": "estados_agua.png",
+    "estados_agua": "estados_agua.jpg",
     "estados_agua2": "estados_agua2.png",
     "densidad_presion": "densidad_presion.jpg",
-    "temperatura_calor": "temperatura_calor.png",
+    "temperatura_calor": "temperatura_calor.jpg",
     "gradiente_atmosfera": "gradiente_atmosfera.png",
-    "gradiente_hidrosfera": "gradiente_hidrosfera.png",
-    "gradiente_litosfera": "gradiente_litosfera.png",
+    "gradiente_hidrosfera": "gradiente_hidrosfera.jpg",
+    "gradiente_litosfera": "gradiente_litosfera.jpg",
     
     # Pestaña 2: Clima
     "tiempo_clima": "tiempo_clima.png",
-    "factores_clima": "factores_clima.png",
+    "factores_clima": "factores_clima.jpg",
     
     # Pestaña 3: Flujos
-    "ecosistema": "ecosistema.png",
-    "cadena_trofica": "cadena_trofica.png",
-    "biomasa_productividad": "biomasa_productividad.png",
-    "biomasa_productividad2": "biomasa_productividad2.png",
-    "biomasa_productividad3": "biomasa_productividad3.png",
+    "ecosistema": "ecosistema.jpg",
+    "cadena_trofica": "cadena_trofica.webp",
+    "biomasa_productividad": "biomasa_productividad.webp",
+    "biomasa_productividad2": "biomasa_productividad2.jpg",
+    "biomasa_productividad3": "biomasa_productividad3.jpg",
     "ciclo_carbono": "ciclo_carbono.png",
     "ciclo_nitrogeno": "ciclo_nitrogeno.png",
     "ciclo_fosforo": "ciclo_fosforo.png"
