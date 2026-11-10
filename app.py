@@ -9,26 +9,30 @@ st.markdown("### CBTIS 303 | Ciencias Naturales, Experimentales y Tecnología II
 st.write("Explora los conceptos fisicoquímicos que explican la dinámica de la hidrósfera y la atmósfera, y los flujos de materia y energía en los ecosistemas.")
 
 # --- RUTAS DE IMÁGENES ---
-# Regla aplicada: Palabra_Palabra y Palabra_Palabra2
+# Regla aplicada: Palabra_Palabra, Palabra_Palabra2, Palabra_Palabra3
 IMAGENES = {
     # Pestaña 1: Fisicoquímica
-    "estados_agua": "estados_agua.jpg",
+    "estados_agua": "estados_agua.png",
     "estados_agua2": "estados_agua2.png",
     "densidad_presion": "densidad_presion.jpg",
-    "temperatura_calor": "temperatura_calor.jpg",
+    "temperatura_calor": "temperatura_calor.png",
     "gradiente_atmosfera": "gradiente_atmosfera.png",
-    "gradiente_hidrosfera": "gradiente_hidrosfera.jpg",
-    "gradiente_litosfera": "gradiente_litosfera.jpg",
+    "gradiente_hidrosfera": "gradiente_hidrosfera.png",
+    "gradiente_litosfera": "gradiente_litosfera.png",
     
-    # Pestaña 2: Clima (Pendientes)
+    # Pestaña 2: Clima
     "tiempo_clima": "tiempo_clima.png",
     "factores_clima": "factores_clima.png",
     
-    # Pestaña 3: Flujos (Pendientes)
+    # Pestaña 3: Flujos
     "ecosistema": "ecosistema.png",
     "cadena_trofica": "cadena_trofica.png",
     "biomasa_productividad": "biomasa_productividad.png",
-    "ciclos_biogeoquimicos": "ciclos_biogeoquimicos.png"
+    "biomasa_productividad2": "biomasa_productividad2.png",
+    "biomasa_productividad3": "biomasa_productividad3.png",
+    "ciclo_carbono": "ciclo_carbono.png",
+    "ciclo_nitrogeno": "ciclo_nitrogeno.png",
+    "ciclo_fosforo": "ciclo_fosforo.png"
 }
 
 # --- BANCO DE PREGUNTAS ---
@@ -310,7 +314,7 @@ with tab_fisico:
                     st.error(f"❌ Incorrecto. Pista: {q['pista']}")
 
 # ============================================================
-# PESTAÑA 2: CLIMA Y TIEMPO ATMOSFÉRICO (Texto listo, imágenes pendientes)
+# PESTAÑA 2: CLIMA Y TIEMPO ATMOSFÉRICO
 # ============================================================
 with tab_clima:
     st.header("☀️ Clima y Tiempo Atmosférico")
@@ -320,6 +324,7 @@ with tab_clima:
         "🌍 Factores que Modifican el Clima"
     ])
 
+    # --- Subpestaña 1: Tiempo vs Clima ---
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
@@ -343,10 +348,11 @@ with tab_clima:
             Se debe al aumento de gases de efecto invernadero.
             """)
 
+    # --- Subpestaña 2: Factores que Modifican el Clima ---
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["factores_clima"], "Factores que modifican el clima: latitud, altitud, corrientes marinas y relieve.")
+            mostrar_imagen(IMAGENES["factores_clima"], "Factores que modifican el clima: latitud, altitud, corrientes marinas, relieve, vientos y distancia al mar.")
         with col2:
             st.success("### 🌍 Factores del Clima")
             st.markdown("""
@@ -354,6 +360,8 @@ with tab_clima:
             - **Altitud:** A mayor altura, menor temperatura (≈ -6 °C por km).
             - **Corrientes marinas:** Modera la temperatura de las costas (ej. Corriente del Golfo).
             - **Relieve:** Las montañas actúan como barreras (efecto Föhn, sombra de lluvia).
+            - **Vientos predominantes:** Determinan qué masa de aire (húmedo o seco) llega a una zona.
+            - **Distancia al mar:** El agua tarda más en calentarse/enfriarse que la tierra, moderando el clima costero.
             """)
             st.info("### 🗺️ Ejemplos")
             st.markdown("""
@@ -373,7 +381,7 @@ with tab_clima:
                     st.error(f"❌ Incorrecto. Pista: {q['pista']}")
 
 # ============================================================
-# PESTAÑA 3: FLUJOS DE MATERIA Y ENERGÍA (Texto listo, imágenes pendientes)
+# PESTAÑA 3: FLUJOS DE MATERIA Y ENERGÍA
 # ============================================================
 with tab_flujos:
     st.header("🔄 Flujos de Materia y Energía en los Ecosistemas")
@@ -385,6 +393,7 @@ with tab_flujos:
         "♻️ Ciclos Biogeoquímicos"
     ])
 
+    # --- Subpestaña 1: Ecosistema y Biodiversidad ---
     with sub1:
         col1, col2 = st.columns([1.2, 1])
         with col1:
@@ -408,6 +417,7 @@ with tab_flujos:
             Ejemplo: las raíces rompen rocas (biodeterioro) y crean suelo.
             """)
 
+    # --- Subpestaña 2: Cadena Trófica y Eficiencia ---
     with sub2:
         col1, col2 = st.columns([1.2, 1])
         with col1:
@@ -421,33 +431,40 @@ with tab_flujos:
             - **Consumidores secundarios:** Carnívoros.
             - **Descomponedores:** Hongos y bacterias.
             """)
-            st.info("### ⚡ Eficiencia Ecológica")
+            st.info("### ⚡ Eficiencia Ecológica (La Ley del 10%)")
             st.markdown("""
-            Solo el **10%** de la energía pasa de un nivel al siguiente.
-            El 90% restante se pierde como calor (respiración, metabolismo).
-            Por eso las pirámides tróficas tienen forma de pirámide.
+            Solo el **10%** de la energía pasa de un nivel al siguiente. 
+            ¿A dónde se va el otro 90%?
+            - **Respiración y calor:** El animal gasta energía para moverse y mantenerse caliente.
+            - **Excreción:** Lo que el animal no digiere (heces y orina).
+            - **Partes no consumidas:** Huesos, pelaje o raíces.
             """)
             st.warning("### 📉 Implicación")
             st.markdown("""
             Se necesitan **10,000 kg de plantas** para producir **1 kg de carnívoro**.
-            Por eso las dietas basadas en vegetales son más eficientes.
+            Por eso las pirámides tróficas son más anchas en la base.
             """)
 
+    # --- Subpestaña 3: Biomasa y Equilibrio ---
     with sub3:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["biomasa_productividad"], "Biomasa, productividad primaria y equilibrio ecológico.")
+            mostrar_imagen(IMAGENES["biomasa_productividad"], "Distribución de la biomasa animal en el planeta.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["biomasa_productividad2"], "Distribución de la biomasa vegetal (las plantas dominan).")
+            st.write("") 
+            mostrar_imagen(IMAGENES["biomasa_productividad3"], "Gráfica científica comparativa de biomasa marina y terrestre.")
         with col2:
             st.success("### 📊 Biomasa")
             st.markdown("""
-            Es la **cantidad total de materia orgánica viva** en un ecosistema.
-            - Se mide en g/m² o kg/ha.
-            - La mayor biomasa está en bosques y océanos.
+            Es la **cantidad total de materia orgánica viva** en un ecosistema (el 'inventario').
+            - Se mide en Gigatoneladas de Carbono (GtC).
+            - La mayor biomasa está en las plantas terrestres y en los océanos.
             """)
             st.info("### 🌱 Productividad Primaria")
             st.markdown("""
-            Es la **velocidad** a la que los productores generan nueva biomasa.
-            - **Neta:** Lo que queda después de la respiración.
+            Es la **velocidad** a la que los productores generan nueva biomasa (el 'salario').
+            - **Neta:** Lo que queda después de la respiración de la planta.
             - **Bruta:** Total producido por fotosíntesis.
             """)
             st.warning("### ⚖️ Equilibrio Ecológico")
@@ -457,10 +474,15 @@ with tab_flujos:
             - Sin equilibrio, el ecosistema colapsa.
             """)
 
+    # --- Subpestaña 4: Ciclos Biogeoquímicos ---
     with sub4:
         col1, col2 = st.columns([1.2, 1])
         with col1:
-            mostrar_imagen(IMAGENES["ciclos_biogeoquimicos"], "Ciclos biogeoquímicos del carbono, nitrógeno y fósforo.")
+            mostrar_imagen(IMAGENES["ciclo_carbono"], "Ciclo biogeoquímico del Carbono.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["ciclo_nitrogeno"], "Ciclo biogeoquímico del Nitrógeno.")
+            st.write("") 
+            mostrar_imagen(IMAGENES["ciclo_fosforo"], "Ciclo biogeoquímico del Fósforo (sin fase gaseosa).")
         with col2:
             st.success("### ♻️ Ciclos Biogeoquímicos")
             st.markdown("""
